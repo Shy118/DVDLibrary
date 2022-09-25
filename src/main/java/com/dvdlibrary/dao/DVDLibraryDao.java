@@ -59,6 +59,5 @@ public interface DVDLibraryDao {
      * @throws DVDLibraryDaoException 
      */
     DVD getDVD(String dvdId) throws DVDLibraryDaoException;
-    
-    
-}
+     
+} //interface

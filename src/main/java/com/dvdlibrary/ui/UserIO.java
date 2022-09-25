@@ -1,7 +1,7 @@
 package com.dvdlibrary.ui;
 
 public interface UserIO {
-
+	
 	void print(String message);
 
     String readString(String prompt);

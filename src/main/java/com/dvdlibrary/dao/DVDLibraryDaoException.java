@@ -7,7 +7,7 @@ public class DVDLibraryDaoException extends Exception {
 	}
 	
 	public DVDLibraryDaoException(String message, Throwable cause) {
-        super(message, cause);
+		super(message, cause);
     }
 	
 }
