@@ -1,0 +1,5 @@
+1::The Conjuring::19/07/2013::R-rating::James Wan::New Line Cinema The Safran::7.5/10.0
+2::Minions::10/07/2015::PG::Kyle Balda, Pirre Coffin::Illumination::6.4/10.0
+3::Minions: The Rise of Gru::01/07/2022::PG::Kyle Balda, Brad Ableson, Jonathan del Val::Illumination::6.6/10.0
+4::The Avengers::04/05/2012::PG-13::Joss Whedon::Walt Disney::8.0/10.0
+5::Top Gun: Maverick::27/05/2022::PG-13::Joseph Kosinski::Paramount Pictures::8.4/10.0
