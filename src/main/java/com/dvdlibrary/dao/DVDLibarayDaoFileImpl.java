@@ -20,7 +20,7 @@ import com.dvdlibrary.dto.DVD;
 @Component(value = "dao")
 public class DVDLibarayDaoFileImpl implements DVDLibraryDao {
 	private Map<String, DVD> DVDs = new HashMap<>();
-	public static final String ROSTER_FILE = "DVDLibrary.txt";
+	public static final String LIBRARY_FILE = "DVDLibrary.txt";
 	public static final String DELIMITER = "::";
 	
 	@Override
@@ -109,7 +109,7 @@ public class DVDLibarayDaoFileImpl implements DVDLibraryDao {
 	        // Create Scanner for reading the file
 	        scanner = new Scanner(
 	                new BufferedReader(
-	                        new FileReader(ROSTER_FILE)));
+	                        new FileReader(LIBRARY_FILE)));
 	    } catch (FileNotFoundException e) {
 	        throw new DVDLibraryDaoException(
 	                "-_- Could not load roster data into memory.", e);
@@ -118,8 +118,8 @@ public class DVDLibarayDaoFileImpl implements DVDLibraryDao {
 	    String currentLine;
 	    // currentDVD holds the most recent DVD unmarshalled
 	    DVD currentDVD;
-	    // Go through ROSTER_FILE line by line, decoding each line into a 
-	    // DVD object by calling the unmarshallStudent method.
+	    // Go through LIBRARY_FILE line by line, decoding each line into a 
+	    // DVD object by calling the unmarshallDVD method.
 	    // Proceed while we have more lines in the file
 	    while (scanner.hasNextLine()) {
 	        // get the next line in the file
@@ -167,7 +167,7 @@ public class DVDLibarayDaoFileImpl implements DVDLibraryDao {
 	}
 	
 	/**
-	 * Writes all DVDs in the roster out to a ROSTER_FILE.  See loadRoster
+	 * Writes all DVDs in the library out to a LIBRARY_FILE.  See loadRoster
 	 * for file format.
 	 * 
 	 * @throws DVDLibraryDaoException if an error occurs writing to the file
@@ -177,13 +177,13 @@ public class DVDLibarayDaoFileImpl implements DVDLibraryDao {
 	    PrintWriter out;
 
 	    try {
-	        out = new PrintWriter(new FileWriter(ROSTER_FILE));
+	        out = new PrintWriter(new FileWriter(LIBRARY_FILE));
 	    } catch (IOException e) {
 	        throw new DVDLibraryDaoException(
 	                "Could not save DVD data.", e);
 	    }
 
-	    // Write out the DVD objects to the roster file.
+	    // Write out the DVD objects to the library file.
 	    String dvdAsText;
 	    List<DVD> dvdList = this.getAllDVDs();
 	    for (DVD currentDVD : dvdList) {

@@ -27,7 +27,7 @@ public interface DVDLibraryDao {
      *
      * @param dvdId id of DVD to be removed
      * @return DVD object that was removed or null if no DVD
-     * was associated with the given student id
+     * was associated with the given DVD id
      * @throws DVDLibraryDaoException 
      */
     DVD removeDVD(String dvdId) throws DVDLibraryDaoException;
